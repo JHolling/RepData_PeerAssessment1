@@ -124,7 +124,7 @@ move_interval_mean$interval)][is.na(move$steps)]
 
 ```r
 move_noNA_day_sum<-aggregate(steps~date,FUN=sum,data=move_noNA)   
-hist(move_noNA_day_sum$steps,breaks=10,xlab="Average Steps",
+hist(move_noNA_day_sum$steps,breaks=10,xlab="Total number of Steps",
 main="Total Number steps per day on data Set without NA's",
 col="forestgreen")     
 ```
