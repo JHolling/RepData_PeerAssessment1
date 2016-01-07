@@ -38,7 +38,7 @@ move_day_sum<-aggregate(steps~date,FUN=sum,data=move)
 #### Plot total number of steps per day
 
 ```r
-hist(move_day_sum$steps,breaks=10,xlab="Average Steps",
+hist(move_day_sum$steps,breaks=10,xlab="Total Number of steps",
 main="Total number of Steps per day",
 col="forestgreen")
 ```
@@ -101,11 +101,11 @@ summary(move)[7]
 ```
 ## [1] "NA's   :2304  "
 ```
-The average activity pattern is showing initial activity at around interval
-600 w/50 steps, then the steps spike upward at interval 835 to over 200 steps. After this
-interval, the steps drop back down to ~50 to 100 and then tappering back off after
-interval 2000. Overall, the plot is right skewed.
-
+The average activity pattern is showing initial activity at around interval 600 
+w/50 steps, then the "steps" spike upward at interval 835 to over 200 steps. 
+After this interval, the steps drop back down to ~50 to 100 and then tappering 
+back off after interval 2000. Overall, the plot is right skewed and has 2304 
+NA's observations.
 
 #### Making a new data set from orginal to processes further
 
@@ -131,7 +131,8 @@ col="forestgreen")
 
 ![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
 
-The new data set w/o the NAs looks in a similar pattern to the original except the mid point is higher due to the "average" interval being applied to the NAs
+
+The new data set w/o the NAs looks in a similar pattern to the original except the mid point is higher due to the "average" interval being applied to the NAs.
 
 #### Calculating the median and mean total for the new data set per day
 
@@ -173,7 +174,7 @@ resulted in no difference between median and mean for that data set without NAs.
 The mean for the data set without NAs and the data set with the NA's is also the 
 same. 
 
-The only difference noticed is the median for data set without the NAs 
+The only difference noticed is the median sfor data set without the NAs 
 went up a small amount compared to the data set with the NAs. This would we
 be from the NA's being replaced with the "average interval mean" and will 
 raise the steps at the mean and raise the median a bit...towards the mean.
